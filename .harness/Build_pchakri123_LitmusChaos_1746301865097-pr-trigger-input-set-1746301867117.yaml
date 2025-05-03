@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_pchakri123_LitmusChaos_1746301865097-pr-trigger-input-set
+  identifier: Build_pchakri123_LitmusChaos_1746301865097prtriggerinputset
+  orgIdentifier: WiproPOC
+  projectIdentifier: First_Demo_application
+  pipeline:
+    identifier: Build_pchakri123_LitmusChaos_1746301865097
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
