@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_pchakri123_LitmusChaos_1746301865097
+  name: Build LitmusChaos
+  orgIdentifier: WiproPOC
+  projectIdentifier: First_Demo_application
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github
+        repoName: pchakri123/LitmusChaos
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Docker
+        type: CI
